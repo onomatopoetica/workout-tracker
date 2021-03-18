@@ -24,17 +24,10 @@ mongoose.connect(
 
 // routes
 app.use(morgan("dev"));
-// app.use("./routes/api");
-// app.use("./models/index");
-// app.use("./public/exercise");
-// app.use("./public/stats");
-// app.use("./public/workout");
 app.use(router);
 require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
+
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
 });
-
-// module.exports = db;

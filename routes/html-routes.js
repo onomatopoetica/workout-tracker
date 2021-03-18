@@ -1,7 +1,6 @@
 const express = require("express");
-// const { dirname } = require("path");
 const path = require("path");
-// const router = require("express").Router();
+
 
 module.exports = function (app) {
     app.get("/", (req, res) => {

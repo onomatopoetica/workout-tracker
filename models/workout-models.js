@@ -8,7 +8,7 @@ const WorkoutSchema = new Schema({
     // Creating exercises
     exercises: [
         {
-            // Setting name, type + duration attributes
+            // Setting name, type, duration, weight, reps, sets + distance attributes
             name: {
                 type: String,
             },
@@ -34,23 +34,23 @@ const WorkoutSchema = new Schema({
     ],
 
 },
-    // {
-    //     toJSON: {
-    // Virtual attributes are attributes do not get persisted to mongodb. For the virtual attribute to be displayed on client side, then set {virtuals: true} for toJSON in schemas
-    //         virtuals: true,
-    //     },
-    // }
+    {
+        toJSON: {
+            // Virtual attributes are attributes do not get persisted to mongodb. For the virtual attribute to be displayed on client side, then set {virtuals: true} for toJSON in schemas
+            virtuals: true,
+        },
+    }
 );
 
-// WorkoutSchema.virtual("totalDuration").get(function () {
-//     // The reduce() method executes a reducer function on each element of an array resulting in single output value
-//     const duration = this.exercises.reduce((acc, curr) => {
-//         return acc + curr.duration;
+WorkoutSchema.virtual("totalDuration").get(function () {
+    // The reduce() method executes a reducer function on each element of an array resulting in single output value
+    const duration = this.exercises.reduce((acc, curr) => {
+        return acc + curr.duration;
 
-//         // Initial value of 0
-//     }, 0);
-//     return duration;
-// });
+        // Initial value of 0
+    }, 0);
+    return duration;
+});
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
 
