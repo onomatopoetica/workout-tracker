@@ -68,7 +68,7 @@ Because this application cannot be deployed on GitHub, a walkthrough video demon
     
 ## Installation: 
  
-* Clone the repo: `git clone - https://github.com/onomatopoetica/workout-tracker.git`
+* Clone the repo: `git clone https://github.com/onomatopoetica/workout-tracker.git`
 
 #### After cloning the repo:
 
@@ -80,8 +80,8 @@ Because this application cannot be deployed on GitHub, a walkthrough video demon
   
 ## Usage 
 
-* See About The Project or demo video above for more information on how it works.
-* View Project Links above for the link to the deployed app on Heroku.
+* See [About The Project](#About-The-Project) or [Demo](#Demo) video above for more information on how it works.
+* View [Project Links](#Project-Links) above for the link to the deployed app on Heroku.
 
 ## Contribution Guidelines
 
