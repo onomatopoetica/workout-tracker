@@ -1,7 +1,7 @@
-# workout-tracker
-A workout tracker using a Mongo database with a Mongoose schema + routes with Express
+![GitHub last commit](https://img.shields.io/github/last-commit/onomatopoetica/workout-tracker)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/onomatopoetica/workout-tracker)  ![GitHub top language](https://img.shields.io/github/languages/top/onomatopoetica/workout-tracker)  ![npm](https://img.shields.io/github/package-json/dependency-version/onomatopoetica/workout-tracker/mongoose?color=red&label=mongoose&logo=NPM) ![npm](https://img.shields.io/github/package-json/dependency-version/onomatopoetica/workout-tracker/morgan?color=yellow&label=morgan&logo=NPM) ![npm](https://img.shields.io/npm/v/express?color=purple&label=express&logo=NPM) ![GitHub license](https://img.shields.io/badge/license-MIT-blueviolet)<br>
 
-![GitHub last commit](https://img.shields.io/github/last-commit/onomatopoetica/workout-tracker)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/onomatopoetica/workout-tracker)  ![GitHub top language](https://img.shields.io/github/languages/top/onomatopoetica/workout-tracker)  ![npm](https://img.shields.io/github/package-json/dependency-version/onomatopoetica/workout-tracker/mongoose?color=red&label=mongoose&logo=NPM) ![npm](https://img.shields.io/github/package-json/dependency-version/onomatopoetica/workout-tracker/morgan?color=yellow&label=morgan&logo=NPM) ![npm](https://img.shields.io/npm/v/express?color=purple&label=express&logo=NPM) ![GitHub license](https://img.shields.io/badge/license-MIT-blueviolet)<br> 
+# Workout Tracker
+A workout tracker using a Mongo database with a Mongoose schema + routes with Express
 
 ## Project Links
 [Repo Link](https://github.com/onomatopoetica/workout-tracker) <br>
