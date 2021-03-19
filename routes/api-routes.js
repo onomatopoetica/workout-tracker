@@ -30,7 +30,8 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
 
 router.get("/api/workouts/range", (req, res) => {
     Workout.find({})
-        .limit(10).then((dbWorkout) => {
+        // Limit() will limit the number of returned documents to seven
+        .limit(7).then((dbWorkout) => {
             res.json(dbWorkout);
         }).catch((err) => {
             res.json(err);
