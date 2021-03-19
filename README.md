@@ -59,8 +59,9 @@ Because this application cannot be deployed on GitHub, a walkthrough video demon
 
 ## Getting Started
     
-#### The following technologies used in this project include:
+#### Technologies used in this project include:
 * MongoDB
+* [MongoDB Atlas](https://account.mongodb.com/) for deploying to Heroku
 * Mongoose 
 * Node
 * Express
