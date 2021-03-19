@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/maniacal-pancake',
+    process.env.MONGODB_URI || 'mongodb://localhost/food',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,

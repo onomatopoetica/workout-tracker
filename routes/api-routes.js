@@ -2,14 +2,13 @@ const Workout = require("../models/workout-models.js");
 const mongoose = require("mongoose");
 const router = require("express").Router();
 
-
 // Route to post form submission to mongoDB via mongoose
 router.post("/api/workouts", ({ body }, res) => {
     Workout.create({}).then((dbWorkout) => {
         // If saved successfully, send the the new Workout document to the client
         res.json(dbWorkout);
-    }).catch(({ message }) => {
-        console.log(message);
+    }).catch((err) => {
+        res.status(500).send('Internal Server Error');
     });
 });
 
@@ -24,25 +23,34 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
         res.json(dbWorkout);
     }).catch((err) => {
         // If an error occurs, send the error to the client
-        res.json(err);
+        res.status(500).send('Internal Server Error');
     });
 });
 
-router.get("/api/workouts/range", (req, res) => {
-    Workout.find({})
-        // Limit() will limit the number of returned documents to seven
-        .limit(7).then((dbWorkout) => {
-            res.json(dbWorkout);
-        }).catch((err) => {
-            res.json(err);
-        });
+// Aggregate function to dynamically add up and return duration for each workout
+router.get("/api/workouts/range", async function (req, res) {
+    try {
+        res.json((
+            await Workout.aggregate([
+                {
+                    $addFields: {
+                        totalDuration: {
+                            $sum: '$exercises.duration',
+                        },
+                    },
+                },
+            ]).limit(7)
+        ));
+    } catch (err) {
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 router.get("/api/workouts", (req, res) => {
     Workout.find({}).then((dbWorkout) => {
         res.json(dbWorkout);
     }).catch((err) => {
-        res.json(err);
+        res.status(500).send('Internal Server Error');
     });
 });
 
