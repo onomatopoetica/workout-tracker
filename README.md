@@ -47,15 +47,15 @@ Because this application cannot be deployed on GitHub, a walkthrough video demon
 
 #### The following is an overview of the application in operation and rendering of the Workout Tracker app. 
     
-<img src="./public/assets/workouttracker.gif" alt="app video" width="900" height="auto"> 
+<img src="./public/assets/workouttracker.gif" alt="app video" width="900" height="auto"> <br>
 
 #### The following are screenshots of the application and overview of its functionality: <br>
 
-<img src="./public/assets/workouttrackerNew.png" alt="app screenshot" width="900" height="auto"> <br>
+<img src="./public/assets/workouttrackerNew.png" alt="app screenshot" width="900" height="auto"> 
 <img src="./public/assets/cardio.png" alt="app screenshot" width="900" height="auto">
 <img src="./public/assets/lastworkoutrun.png" alt="app screenshot" width="900" height="auto">
 <img src="./public/assets/success.png" alt="app screenshot" width="900" height="auto">
-<img src="./public/assets/dashboard.png" alt="app screenshot" width="900" height="auto">
+<img src="./public/assets/wrkoutdashboard.png" alt="app screenshot" width="900" height="auto">
 
 ## Getting Started
     

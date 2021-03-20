@@ -39,6 +39,7 @@ router.get("/api/workouts/range", async function (req, res) {
                         },
                     },
                 },
+                // Limiting number of documents returned in the output to 7
             ]).limit(7)
         ));
     } catch (err) {
