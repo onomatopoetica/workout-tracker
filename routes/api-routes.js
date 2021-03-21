@@ -39,11 +39,11 @@ router.get("/api/workouts/range", async function (req, res) {
                         },
                     },
                 },
-                // Returning the 7 most recent documents (subtracts the oldest document with -1)
-            ]).sort({ _id: -1 })
+                // Returning the 7 most recent documents (subtracts the oldest document [day] with -1)
+            ]).sort({ day: -1 })
                 // Limiting number of documents returned in the output to 7
                 .limit(7)
-            // Shows workouts in order of most recent (left to right)
+            // Shows workouts in order of most recent (right to left)
         ).reverse());
     } catch (err) {
         res.status(500).send('Internal Server Error');

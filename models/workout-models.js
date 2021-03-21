@@ -48,12 +48,11 @@ const WorkoutSchema = new Schema({
         },
     }
 );
-
+// Getting total duration for each workout
 WorkoutSchema.virtual("totalDuration").get(function () {
     // The reduce() method executes a reducer function on each element of an array resulting in single output value
     const duration = this.exercises.reduce((acc, curr) => {
         return acc + curr.duration;
-
         // Initial value of 0
     }, 0);
     return duration;
