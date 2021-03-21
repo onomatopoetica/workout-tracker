@@ -55,7 +55,7 @@ Because this application cannot be deployed on GitHub, a walkthrough video demon
 <img src="./public/assets/cardio.png" alt="app screenshot" width="900" height="auto">
 <img src="./public/assets/lastworkoutrun.png" alt="app screenshot" width="900" height="auto">
 <img src="./public/assets/success.png" alt="app screenshot" width="900" height="auto">
-<img src="./public/assets/wrkoutdashboard.png" alt="app screenshot" width="900" height="auto">
+<img src="./public/assets/wtdashboard.png" alt="app screenshot" width="900" height="auto">
 
 ## Getting Started
     

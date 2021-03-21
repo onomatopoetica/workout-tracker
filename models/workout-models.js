@@ -11,11 +11,13 @@ const WorkoutSchema = new Schema({
             // Setting name, type, duration, weight, reps, sets + distance attributes
             name: {
                 type: String,
-                required: true
+                required: true,
+                trim: true
             },
             type: {
                 type: String,
-                required: true
+                required: true,
+                trim: true
             },
             duration: {
                 type: Number,
@@ -43,7 +45,10 @@ const WorkoutSchema = new Schema({
 },
     {
         toJSON: {
-            // Virtual attributes are attributes do not get persisted to mongodb. For the virtual attribute to be displayed on client side, then set {virtuals: true} for toJSON in schemas
+            // An "implicit" call of the toJSON() method on the object
+            // It is instead calculated from other properties in the document
+            // This is telling the method to not only include data or "fields" present in the object, but also the "virtual" methods defined and the output they give as well
+            // Mongoose virtual attributes are attributes do not get persisted to MongoDB. For the virtual attribute to be displayed on client side, then set {virtuals: true} for toJSON in schemas
             virtuals: true,
         },
     }
